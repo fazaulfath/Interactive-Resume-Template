@@ -1,0 +1,844 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height:100%;
+    background-color: #000000;
+    font-family: 'Plus Jakarta Sans';
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    position: relative;
+    margin: 2rem auto;
+    width: 1000px;
+    height:100%;
+    background-color: #562222;
+}
+
+.resume-content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 2rem auto;
+    width: 1000px;
+    height:100%;
+    background-color: #000000;
+}
+
+/* header section */
+
+div.header{
+    width: auto;
+    height: 30px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+ 
+
+div.item{
+    width: 25%;
+    top:-50%;
+    position: relative;
+    height: 30px;
+    padding-bottom: 8px;
+    padding-top:14px;
+    padding-left:40px;
+    padding-right:10px;
+    background: #1296E0;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+a{
+    text-decoration:none;
+    color: rgb(255, 255, 255);
+}
+
+
+div.item:hover{
+    border-radius: 50px;
+    background: #67b5e2;
+    background: #67b5e2;
+    color: rgb(0, 0, 0)
+}
+
+
+button.download{
+    width: 90%;
+    top:-50%;
+    position: relative;
+    right:-150%;
+    height: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background: #1296E0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+button.download:hover{
+    border-radius: 50px;
+    background: #67b5e2;
+    background: #67b5e2;
+    color: rgb(0, 0, 0)
+}
+
+/* home1 */
+
+div.home1{
+    display:flex;
+    flex-direction: column;
+    flex:1;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+
+div.homerow{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div.homeleft{
+    top: 1%;
+    width:300px;
+    margin-top: 2%;
+}
+
+div.hello{
+    padding-top: 8px;
+    padding-bottom: 6px;
+    padding-left: 30px;
+    padding-right: 30.03px;
+    background: #1296E0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline-flex;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    position: relative;
+    left: 15%;
+}
+
+h1.he {
+    color: white;
+    margin-bottom: 2%;
+    position: relative;
+    font-size: 26px;
+    left: 18%;
+    padding-top: 2%;
+}
+
+h2.hh{
+    font-size: 28px;
+    color: #1296E0;
+    margin-top: 1% ;
+    position: relative;
+    font-size: 22px;
+    left: 18%;
+    margin-bottom: 2%;
+}
+
+.logos
+{
+    position: relative;
+    left: 27%;
+    padding-top: 5%;
+    padding-bottom: 20px;
+}
+
+span.details {
+    color: white;
+    width:80px;
+    margin-left:10%;
+    top:13%
+}
+.logo
+{
+    margin: auto;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.logos2a, .logos2b, .logos2c, .logos2d{
+    position: absolute;
+    left: 12%;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo2{
+    margin-right: 50px;
+}
+
+h3{
+    color: white;
+}
+
+.par{
+    color: white;
+}
+
+.about
+{
+    margin-top:-16%;
+    height: fit-content;
+    position: relative;
+    left: 7%;
+    color: grey
+}
+
+div.ab{
+    width: 90%;
+    height: fit-content;
+    margin-top: 5%;
+}
+
+.box
+{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 10%;
+    top: auto;
+    padding: auto;
+}
+
+.skill
+{
+    padding: 8px;
+    height: 20px;
+    margin-right: 1%;
+    border-color: white;
+    border: dotted grey ;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+h5{
+    position: relative;
+    bottom: 19px;
+    color: white;
+}
+
+
+/* Education */
+
+div.row-2{
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+}
+
+div.container{
+    margin-top: 5.5%;
+    width: 400px;
+    height: 660px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    left: 6%;
+    gap: 60px;
+    display: flex
+}
+
+div.head{
+    color: white;
+    font-size: 30px;
+    font-family: Plus Jakarta Sans;
+    font-weight: 700;
+    line-height: 40px;
+    word-wrap: break-word
+}
+
+div.box1{
+    height: 220px;
+    width: 360px;
+    top:5%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: inline-block;
+}
+
+div.box2{
+    height: 220px;
+    width: 400px;
+    padding:5%;
+    background: #202026;
+    box-shadow: -16px 0px 48px black;
+    border-radius: 4px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    display: flex
+}
+
+div.header{
+    width: 400px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5.25px;
+    display: inline-flex
+}
+
+div.header-1{
+    color: white;
+    font-size: 20px;
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    line-height: 30px;
+    word-wrap: break-word
+}
+
+div.header-2{
+    opacity: 0.90;
+    color: #1296E0;
+    font-size: 20px;
+    font-family: Plus Jakarta Sans;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 30px;
+    word-wrap: break-word
+}
+
+div.year{
+    color: #1296E0;
+    font-size: 14px;
+    font-family: Plus Jakarta Sans;
+    position:relative;
+    top:20%;
+    font-weight: 500;
+    line-height: 24px;
+    word-wrap: break-word
+}
+
+div.para{
+    width: 390px;
+    opacity: 0.90;
+    position:relative;
+    top:28%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline-flex
+}
+
+p.box3{
+    color: white;
+    font-size: 14px;
+    font-family: Plus Jakarta Sans;
+    font-weight: 500;
+    line-height: 23px;
+    word-wrap: break-word
+}
+
+/* tech skills */
+
+div.row2-right{
+    height: 800px;
+    width: 300px;
+    position: relative;
+    left: 1%;
+    float: right;
+    display: flex;
+    margin-top: 3.5%;
+    position: absolute;
+    margin-left: 52%;
+    flex-direction: column;
+}
+
+div.container-fluid1{
+    height: 320px;
+    width: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 5% 5% 5% 5%;
+}
+
+div.heading{
+    text-align: center;
+    color: white;
+    position: relative;
+    left: 23%;
+    font-size: 30px;
+    font-family: Plus Jakarta Sans;
+    font-weight: 700;
+    line-height: 40px;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+div.container1{
+    position: relative;
+    width: 300px;
+    height: 150px;
+    position: relative;
+    left: 25%;
+    top: 8%;
+    right: inherit;
+    float: left;
+    padding-bottom: 4% ;
+}
+
+div.block{
+    position: relative;
+    width: 330px;
+    height:100%;
+    left: 0px;
+    top: 0px;
+    justify-content: x;
+    align-items:normal;
+}
+
+div.block1{
+    width: 300px;
+    position: relative;
+    display:flex;
+    align-items: flex-end
+}
+
+
+div.skills{
+    opacity: 0.90;
+    color: white;
+    font-size: 15px;
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    line-height: 24px;
+    word-wrap: break-word
+}
+
+div.value{
+    color: white;
+    font-size: 14px;
+    position:absolute;
+    left: 85%;
+    right:5%;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word
+}
+
+div.slider{
+    height: 7px;
+    width: 300px;
+    left: 0px;
+    top: 30px;
+    background: rgba(199, 198, 198, 0.60);
+    border-radius: 10px;
+    justify-content: flex-start;
+    display: inline-flex
+}
+
+div.slide{
+    height: 7px;
+    background: #1296E0;
+    border-radius: 10px
+}
+
+
+div#slide1{
+    width:100%;
+}
+
+div#slide2{
+    width:100%;
+}
+
+div#slide3{
+    width:100%;
+}
+
+div#slide4{
+    width:100%;
+}
+
+/* circles */
+
+div.row-3{
+    margin-top: 25%;
+    height: 400px;
+    width: 400px;
+    position: relative;
+    right:0px
+}
+
+div.heading1{
+    text-align: center;
+    color: white;
+    position: relative;
+    left: 10%;
+    font-size: 30px;
+    font-family: Plus Jakarta Sans;
+    font-weight: 700;
+    line-height: 40px;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+div.new1{
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    left: 13%;
+    margin-top:7%;
+    display: flex;
+    flex-flow: column
+}
+
+.new{
+    display: flex;
+    flex: inline-block;
+    flex-direction: row;
+    padding: auto;
+    padding-left: 10%;
+    padding-right: 15%;
+}
+
+.circle{
+    border : #1296E0 solid 5px;
+    position: relative;
+    left:5%;
+    margin-right: 45px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+h4.no{
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+h4.skillname{
+    color: white;
+    margin-right:15%;
+    margin-left: 9%
+}
+
+h4.h1{
+    color: white;
+    margin-right:15%;
+    margin-left: 8%
+}
+
+
+h4.h{
+    color: white;
+    margin-right:10%;
+    margin-left: 8%;
+}
+
+/*  */
+
+/* do */
+div.row-4{
+    height: 300px;
+    justify-content: center;
+    margin-top: 30%;
+}
+
+.what{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-weight: 700;
+    line-height: 40px;
+    justify-content: center;
+    word-wrap: break-word;
+    margin-top: 6%;
+}
+
+div.do{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.block2
+{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    height: 260px;
+    border-radius: 15px;
+    width: 240px;
+    position: relative;
+    margin-left: 2%;
+    margin-right: 3%;
+    margin-top: 5%;
+    align-items: flex-start;
+    background-color:black
+}
+
+.block3
+{
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 260px;
+    border-radius: 15px;
+    gap:5%;
+    background: #202026;
+    box-shadow: -16px 0px 48px 0px #000;
+}
+
+.gg-media-live{
+    margin-top: 5%;
+    color: rgb(59, 10, 207);
+    margin-top: 7%;
+    margin-left: 45%;
+    align-content:left;
+    top: 1%;
+}
+
+.gg-code-slash
+{
+    position: relative;
+    color: rgb(208, 82, 19);
+    margin-top: 7%;
+    margin-left: 45%;
+    align-content:left;
+    top: 1%;
+}
+
+.gg-clapper-board{
+    position: relative;
+    color: rgb(14, 165, 182);
+    margin-top: 7%;
+    margin-left: 45%;
+    align-content:left;
+    top: 1%;
+}
+
+
+h3.do{
+    top:2%;
+    color:white;
+    margin:1rem auto
+}
+
+p.do{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    height: fit-content;
+    text-align: center;
+    color: #ffffff;
+    margin-top: -2%;
+    justify-content: center;
+}
+
+/* Projects */
+
+div.row-5{
+    height: 500px;
+    justify-content: center;
+    margin-top: 12%
+}
+
+div.container-fluid2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.container2{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    height: 360px;
+    border-radius: 15px;
+    width: 250px;
+    margin-left: 3%;
+    margin-right: 5%;
+    max-width: 200px;
+    min-height: 1px;
+    position: relative;
+    margin-top: 4%;
+    align-items: flex-start;
+    background-color:black
+}
+
+div.block4{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 100%;
+    border-radius: 15px;
+    background: #202026;
+    box-shadow: -16px 0px 48px 0px #000;
+}
+
+h3{
+    margin-top:18%;
+    color:white;
+}
+p{
+    margin-top: -4%;
+    color:white;
+}
+
+p.h24{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    color: #1296E0;
+    margin-top: -2%;
+    justify-content: center;
+    height:fit-content;
+    text-align: center;
+}
+
+div.button{
+    background-color: #1296E0;
+    width: 50%;
+    height: 10%;
+    border-radius: 15px;
+    position: relative;
+    top:-8%;
+    padding-bottom: 4%;
+}
+
+a.b{
+    color:white;
+    position: relative;
+    top: 32%;
+    left:14%;
+    text-align: center;
+}
+
+.container3 {
+    position: relative;
+    margin-top: 5%;
+    width: 100%;
+    height: 300px;
+    background-color:rgba(0, 0, 0, 0.741);
+    overflow: hidden;
+}
+
+.explore-section,
+.name-section,
+.social-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 32px;
+}
+
+.explore-section {
+    position: absolute;
+    left: 70%;
+    top: 25%;
+}
+
+.name-section {
+    position: absolute;
+    margin-left: 3%;
+    left: 2%;
+    top: 25%;
+    gap: 4px;
+}
+
+.social-section {
+    position: absolute;
+    left: 85%;
+    top: 25%;
+    max-width: 15%; /* Adjust the max-width as needed */
+}
+
+.explore-text,
+.social-text {
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.nav-links,
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.nav-link,
+.social-link {
+    width: 55px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 20px;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.name-text {
+    width: 433px;
+    color: white;
+    font-size: 64px;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+.email-text {
+    color: #1296E0;
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.copyright-text {
+    position: absolute;
+    left: 45%;
+    bottom: 5%;
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 14px;
+    font-family: 'Plus Jakarta Sans';
+    font-weight: 400;
+    word-wrap: break-word;
+}

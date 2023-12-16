@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/images/icc.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/check.css' rel='stylesheet'>
+    {% load static %}
+    <style>
+        /* Reset some default styles */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Set the default link color */
+        .item a:link {
+        color: #1296E0;
+        }
+
+        /* Set the visited link color */
+        .item a:visited {
+        color: #1296E0;
+        }
+
+        /* Set the link color when hovered */
+        .item a:hover {
+        color: #1296E0;
+        }
+
+        /* Set the link color when clicked/active */
+        .item a:active {
+        color: #1296E0;
+        }
+
+        div.home{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            width: 80%;
+            max-width: 1200px;
+            height:100%;
+            background-color: #e6d6d6;
+            /* background-color: grey; */
+        }
+      
+
+        a{
+            text-decoration: none;
+        }
+
+        /* Global styles */
+        body {
+            font-family: 'Plus Jakarta Sans';
+            background-color: #000000;
+        }
+
+        /* navigation bar */
+        div.nav {
+            width: 100%;
+            position: relative;
+        }
+
+        div.navcolor {
+            width: 100%;
+            height: 90px;
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            background: black;
+        }
+        div.proper-nav
+        { 
+             width: 100%;
+            height: 100px;
+           background-color: #000000;
+            display: flex;
+            flex-direction:row ;
+            flex-shrink: 0;
+flex-flow: row wrap;
+
+ 
+ 
+        }
+
+        div.loginnav {
+            width: 10%;
+            height: 20px;
+            left: 3%;
+            top: 31px;
+            position: relative;
+          
+        }
+
+        div.login-element{
+            width: 110px;
+            height: 20px;
+            position: relative;
+        }
+
+        div.point{
+            width: 5px;
+            height: 5px;
+            left: 0px;
+            top: 10px;
+            position: absolute;
+            background: white;
+            border-radius: 9999px;
+        }
+
+        div.item{
+            left: 10px;
+            top: 0px;
+            position: absolute;
+            color: white;
+            font-size: 16px;
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+
+        div.item1{
+            left: 0px;
+            top: 0px;
+            width: 150px;
+            position: absolute;
+            color: white;
+            font-size: 16px;
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+
+        div.point1{
+            width: 5px;
+            height: 5px;
+            left: 140px;
+            top: 10px;
+            position: absolute;
+            background: white;
+            border-radius: 9999px;
+        }
+
+        div.item2{
+            left: 150px;
+            top: 0px;
+            position: absolute;
+            color: #1296E0;
+            font-size: 16px;
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+
+        div.item:hover{
+            color:#1296E0;
+            font-size: 15px;
+        }
+
+        div.navigation{
+            width: 60%;
+            height: 20%;
+            left: 30%;
+            top: 31px;
+            position: relative;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 54px;
+            display: inline-flex;
+            flex-shrink: 0;
+flex-flow: row wrap;
+        }
+
+        div.home-element{
+            width: 55px;
+            height: 20px;
+            position: relative;
+        }
+
+        div.itemnav{
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 9px;
+            display: inline-flex;
+        }
+
+        div.Whyus-element{
+            
+            width: 70px;
+            height: 20px;
+            position: relative;
+        }
+
+        div.resume-element{
+            width: 70px;
+            height: 20px;
+            position: relative;
+        }
+
+        div.team-element{
+            width: 90px;
+            height: 20px;
+            position: relative;
+        }
+
+        div.contact-element{
+            width: 80px;
+            height: 20px;
+            position: relative;
+        }
+
+        /* top section */
+
+        div.top-section{
+            
+            margin-bottom: 0%;
+            width:100%;
+            height:700px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            display: block;
+            background-image: url("{% static 'images/image.png' %}");
+            background-size: cover;
+        }
+
+        h1.w{
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+            left: 10%;
+            font-size: 90px;
+            color: black;
+            bottom: -10%;
+        }
+
+        h1.h{
+            width: fit-content;
+            position: relative;
+          
+            left: 10%;
+            font-size: 90px;
+            color: white;
+           
+         }
+
+        h3.c{
+            position: relative;
+            left: 10%;
+            font-size: 40px;
+            color: white;
+        }
+
+        h3.r{
+            position: relative;
+            left: 12%;
+            font-size: 40px;
+            color: #1296E0;
+        }
+
+        h3.q{
+            position: relative;
+            left: 14%;
+            font-size: 40px;
+            color: rgb(128, 128, 128);
+        }
+
+        div.line1{
+            
+        
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+        }
+
+        div.line2{
+            width: fit-content;
+            position: relative;
+            left: 6%;
+            bottom: 66px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+        }
+
+        .cta-button1 {
+            width: 200px;
+            height: 70px;
+            background: #1296E0;
+            color: white;
+            font-size: 20px;
+            font-weight: 800;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+           position: relative;
+           left:10% ;
+           bottom: 50px;
+        }
+
+        div.cta-button1:hover{
+            color: #1296E0;
+            background-color: white;
+            transition-duration: 1s;
+        }
+
+        /* Why Choose Us section */
+
+        div.container{
+            
+            height: 150%;
+            width:100%;
+          margin: auto;
+            background-color: #000000;
+             
+            
+        }
+
+        .why-choose-us {
+            padding: 2%;
+            position: relative;
+            top: 10%;
+              margin: auto;
+              width: 80%;
+            background-color: #000000;
+            text-align: left;
+             
+        }
+
+        .section-title {
+            color: #5D5D5D;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .heading-container {
+            margin-bottom: 40px;
+        }
+
+        .heading-text {
+            font-size: 50px;
+            font-weight: 800;
+            word-wrap: break-word;
+        }
+
+        .heading-text-first {
+            color: white;
+        }
+
+        .heading-text-second {
+            color: #1296E0;
+        }
+
+        /* Call-to-action button */
+        .cta-button {
+            width: 247px;
+            height: 64px;
+            background: #1296E0;
+            color: white;
+            font-size: 20px;
+            font-weight: 800;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            margin-bottom: 40px;
+        }
+
+        div.cta-button:hover{
+            color: #1296E0;
+            background-color: white;
+            transition-duration: 1s;
+        }
+
+        /* Feature sections */
+        .feature-section {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 32px;
+            margin-top: -1%;
+            margin-bottom: 20px;
+        }
+
+        .icon-container {
+            margin-top: -4%;
+            width: 30px;
+            height: 30px;
+            position: relative;
+        }
+
+        .icon-background {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            background: #101010;
+            border-radius: 9999px;
+        }
+
+        .icon-inner {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 55%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+        }
+
+        i.gg-check{
+            color:#1296E0;
+            width: 100%;
+        }
+
+        .feature-content {
+            flex: 1;
+            padding-top: 0;
+            padding: 1.5%;
+        }
+
+        .feature-title {
+            color: white;
+            font-size: 20px;
+            font-weight: 800;
+            word-wrap: break-word;
+        }
+
+        .feature-description {
+            color: #5D5D5D;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        /* Hover effect */
+        .feature-section:hover .icon-background {
+            background: #1296E0;
+            transition-duration: 0.75s;
+        }
+
+        .feature-section:hover i.gg-check {
+            color: white;
+            transition-duration: 0.75s;
+        }
+
+        .icon-container:hover .icon-background {
+            background: #1296E0;
+            transition-duration: 0.75s;
+        }
+
+        .icon-container:hover i.gg-check{
+            color: white;
+            transition-duration: 0.75s;
+        }
+
+
+        div.cta-button:hover{
+            color: #1296E0;
+            background-color: white;
+            transition-duration: 1s;
+        }
+
+        
+
+        .social-section {
+            position: absolute;
+            left: 90%;
+            top: 10%;
+            max-width: 15%; /* Adjust the max-width as needed */
+        }
+
+        .nav-links,
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+
+        .social-link {
+            width: 55px;
+            height: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            color: rgba(255, 255, 255, 0.48);
+            font-size: 20px;
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+        /* contact section */
+        .contact
+        {
+            margin: auto;
+            width: 100%;
+            height: 150%;
+            background-color: #000000;
+        }
+        .contact-right
+        {
+            display: flex;
+            flex-direction: column;
+            float: inline-end;
+            margin-right: 5%;
+            margin-top: 5%;
+        }
+        .explore
+        {
+            display: flex;
+            flex-direction: row;
+            float: inline-end;
+            margin-right:20% ;
+        
+        }
+        .explore2
+        {
+            float: inline-end;
+            margin-top: 10%;
+            margin-right:20% ;
+
+        }
+        .explore-text
+        {
+            color: rgba(255, 255, 255, 0.48);
+            font-size: 16px;
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+        .nav-links{
+            float: inline-end;
+        }
+        .nav-link
+        {
+            font-size: 20px;
+            color: #5D5D5D;
+        }
+        .name-section
+        {
+            margin-top: 7%;
+            margin-left:3% ;
+        }
+        .name-text 
+        {
+            color: #ffffff;
+            font-size: 50px;
+            font-weight:200 ;
+        }
+        .text1
+        {   
+            color: #5D5D5D;
+            margin-top: 5%;
+            font-size: 20px;
+        }
+
+        .email-text 
+        {
+            margin-top: 2%;
+            font-size: 30px;
+            color: #ffffff;
+        }
+        .copyright-text {
+            margin-top: 8%;
+            font-size: 10px;
+        
+        }
+        .copyright-texts
+        {
+            color: #5D5D5D;
+             text-align: center;
+            margin-top: 6%;
+            
+        }
+        /* templates */
+        .templates
+        {
+            background-color: #1A1A1A;
+            height: 160%;
+            width: 100%;
+            
+            
+        }
+        .template-text
+        {
+            color: #5D5D5D;
+            font-family: 'Plus Jakarta Sans';
+            font-size: 30px;
+            margin-left: 3%;
+            margin-top: 5%;
+        }
+
+        /* .template-img{
+            width: 300px;
+            height: 500px;
+            border-radius: 0.1px;
+            border: solid;
+            border-color: #ffffff;
+            margin-right: 2%;
+            margin-left: 2%;
+            margin-top: 4%;
+        } */
+
+        .template-img1{
+            border-radius: 0.1px;
+            border: solid;
+            border-color: #ffffff;
+            margin-right: 2%;
+            margin-left: 2%;
+            margin-top: 4%;
+        }
+
+        .template-img2{
+            border-radius: 0.1px;
+            border: solid;
+            border-color: #ffffff;
+            margin-right: 2%;
+            margin-left: 2%;
+            margin-top: 4%;
+        }
+
+        .template-img3{
+            border-radius: 0.1px;
+            border: solid;
+            border-color: #ffffff;
+            margin-right: 2%;
+            margin-left: 2%;
+            margin-top: 4%;
+        }
+
+        .template-img4{
+            border-radius: 0.1px;
+            border: solid;
+            border-color: #ffffff;
+            margin-right: 2%;
+            margin-left: 2%;
+            margin-top: 4%;
+        }
+
+
+        /* .template-img:hover{
+            border-color: #1296E0;
+            width: 400px;
+            height: 500px;
+        } */
+        .template-flex
+        {
+             margin-bottom: 5%;
+             width: 100%;
+            display: flex;
+            flex-direction: row;
+
+            flex-shrink: 0;
+flex-flow: row wrap;
+justify-content: center;
+align-items: flex-end;
+        }
+      .quote
+      {
+        position: relative;
+        top: -9%;
+      
+      }
+    </style>
+    <title>Home</title>
+</head>
+<body>
+    
+    <div class="home">
+ 
+    
+           
+                     
+                    <div class="proper-nav"> 
+                        <div class="loginnav">
+                            <div class="login-element">
+                                <div class="point"></div>
+                                <div class="item"><a href="{% url 'login' %}">Login</a></div>
+                            </div>
+                        </div>
+                        <div class="navigation">
+                            
+                                <div class="home-element">
+                                    <div class="point"></div>
+                                    <div class="item"><a href="#">Home</a></div>
+                                </div>
+                           
+                            
+                                <div class="Whyus-element">
+                                    <div class="point"></div>
+                                    <div class="item"><a href="#why-choose-us">Why Us</a></div>
+                                </div>
+                           
+                            
+                                <div class="resume-element">
+                                    <div class="point"></div>
+                                    <div class="item"><a href="#template">Resume</a></div>
+                                </div>
+                             
+                            
+                                <div class="team-element">
+                                    <div class="point"></div>
+                                    <div class="item"><a href="{% url 'team' %}">Our Team</a></div>
+                                </div>
+                            
+                            
+                                <div class="contact-element">
+                                    <div class="point"></div>
+                                    <div class="item"><a href="#contact">Contact</a></div>
+                                </div>
+                             
+                        </div>
+                   </div>
+                    
+          
+        <div class="top-section">
+             
+            <h1 class="w">WEB</h1>
+            <h1 class="h">HOODLUMS</h1>
+            <div class="quote">
+            <div class="line1">
+                <h3 class="c">"Crafting</h3>
+                <h3 class="r">Resume</h3>
+            </div>
+            <div class="line2">
+                <h3 class="c">with</h3>
+                <h3 class="r">Creative Code</h3>
+                <h3 class="q">"</h3>
+            </div>
+            <a href="{% url 'signup' %}" class="cta-button1">Sign Up</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="why-choose-us" >
+                <div class="section-title" id="why-choose-us">Why Choose Us</div>
+                <div class="heading-container">
+                    <span class="heading-text heading-text-first">Providing The </span>
+                    <span class="heading-text heading-text-second">Best </span>
+                    <span class="heading-text heading-text-first">Services</span>
+                </div>
+                <div class="feature-section">
+                    <div class="icon-container">
+                        <div class="icon-background">
+                            <div class="icon-inner">
+                                <i class="gg-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-title">Cutting-Edge Design</div>
+                        <div class="feature-description">Our modern, captivating designs ensure your resume stands out, presenting your skills and experience in a visually compelling way.</div>
+                    </div>
+                </div>
+                <div class="feature-section">
+                    <div class="icon-container">
+                        <div class="icon-background">
+                            <div class="icon-inner">
+                                <i class="gg-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-title">Your Resume, Your Way</div>
+                        <div class="feature-description">Customize your interactive resume effortlessly to showcase your achievements and skills, aligning perfectly with your career objectives.</div>
+                    </div>
+                </div>
+                <div class="feature-section">
+                    <div class="icon-container">
+                        <div class="icon-background">
+                            <div class="icon-inner">
+                                <i class="gg-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-title">Your Data, Our Priority</div>
+                        <div class="feature-description">Benefit from a secure and stable website, ensuring the safety of your information as you create and share your interactive resume.</div>
+                    </div>
+                </div>
+                <div class="feature-section">
+                    <div class="icon-container">
+                        <div class="icon-background">
+                            <div class="icon-inner">
+                                <i class="gg-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-title">Assistance at your fingertips</div>
+                        <div class="feature-description">Our team is ready to assist you promptly, providing guidance and solutions for any questions or technical issues you may encounter. Your success is important to us.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="templates" id="template">
+            <div class="template-text">Choose your template-</div>
+            <div class="template-flex">
+                <div class="template-img1" id="template1">
+                    <a href="{% url 'form1' %}">
+                        <img src="{% static 'images/Template1.jpg' %}" alt="tem1" width="207" height="500">
+                    </a>
+                </div>
+                <div class="template-img2" id="template2">
+                    <a href="{% url 'form2' %}">
+                        <img src="{% static 'images/Template2.jpg' %}" alt="tem2" width="207" height="500">
+                    </a>
+                </div>
+                <div class="template-img3" id="template3">
+                    <a href="{% url 'form3' %}">
+                        <img src="{% static 'images/Template3.jpg' %}" alt="tem3" width="207" height="500">
+                    </a>
+                </div>
+                <div class="template-img4" id="template4">
+                    <a href="{% url 'form4' %}">
+                        <img src="{% static 'images/Template4.jpg' %}" alt="tem4" width="207" height="500">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="template-link-flex"> 
+        <div class="template-link">Template-1</div>
+        <div class="template-link">Template-2</div>
+        <div class="template-link">Template-3</div>
+        <div class="template-link">Template-3</div>
+    </div> -->
+     
+        <div class="contact" id="contact">
+            <div class="contact-right">
+                <div class="explore">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="57" viewBox="0 0 56 57" fill="none">
+                        <circle cx="28" cy="28.9801" r="28" fill="black"/>
+                        <path d="M39 17.9924C38.0424 18.8206 36.9821 19.454 35.86 19.8683C35.2577 19.0193 34.4573 18.4175 33.567 18.1444C32.6767 17.8712 31.7395 17.94 30.8821 18.3412C30.0247 18.7424 29.2884 19.4568 28.773 20.3878C28.2575 21.3188 27.9877 22.4214 28 23.5465V24.7725C26.2426 24.8284 24.5013 24.3505 22.931 23.3815C21.3607 22.4125 20.0103 20.9823 19 19.2185C19 19.2185 15 30.253 24 35.1572C21.9405 36.8712 19.4872 37.7307 17 37.6094C26 43.7397 37 37.6094 37 23.5097C36.9991 23.1682 36.9723 22.8275 36.92 22.4921C37.9406 21.258 38.6608 19.7 39 17.9924Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="57" viewBox="0 0 56 57" fill="none">
+                        <circle cx="28" cy="28.9801" r="28" fill="black"/>
+                        <path d="M35 17.9801H31.1818C29.4941 17.9801 27.8755 18.5596 26.682 19.591C25.4886 20.6225 24.8182 22.0214 24.8182 23.4801V26.7801H21V31.1801H24.8182V39.9801H29.9091V31.1801H33.7273L35 26.7801H29.9091V23.4801C29.9091 23.1884 30.0432 22.9086 30.2819 22.7023C30.5205 22.496 30.8443 22.3801 31.1818 22.3801H35V17.9801Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="57" viewBox="0 0 56 57" fill="none">
+                        <circle cx="28" cy="28.9801" r="28" fill="black"/>
+                        <path d="M32.7917 24.6754C34.5709 24.6754 36.2772 25.4196 37.5352 26.7443C38.7933 28.0689 39.5 29.8656 39.5 31.739V39.9797H35.0278V31.739C35.0278 31.1145 34.7922 30.5156 34.3729 30.0741C33.9535 29.6325 33.3848 29.3844 32.7917 29.3844C32.1987 29.3844 31.6299 29.6325 31.2105 30.0741C30.7912 30.5156 30.5556 31.1145 30.5556 31.739V39.9797H26.0834V31.739C26.0834 29.8656 26.7901 28.0689 28.0482 26.7443C29.3063 25.4196 31.0125 24.6754 32.7917 24.6754Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.2917 25.6324H16.5V39.9803H21.2917V25.6324Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.8958 22.7627C20.219 22.7627 21.2917 21.6921 21.2917 20.3714C21.2917 19.0507 20.219 17.9801 18.8958 17.9801C17.5727 17.9801 16.5 19.0507 16.5 20.3714C16.5 21.6921 17.5727 22.7627 18.8958 22.7627Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="57" viewBox="0 0 56 57" fill="none">
+                        <circle cx="28" cy="28.9801" r="28" fill="black"/>
+                        <path d="M33.5 17.9801H22.5C19.4624 17.9801 17 20.4425 17 23.4801V34.4801C17 37.5177 19.4624 39.9801 22.5 39.9801H33.5C36.5376 39.9801 39 37.5177 39 34.4801V23.4801C39 20.4425 36.5376 17.9801 33.5 17.9801Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M32.5338 28.3075C32.6752 29.2611 32.5124 30.2351 32.0683 31.0908C31.6243 31.9465 30.9218 32.6404 30.0607 33.0738C29.1996 33.5072 28.2237 33.6581 27.2719 33.5049C26.3201 33.3518 25.4409 32.9024 24.7592 32.2207C24.0775 31.539 23.6281 30.6598 23.475 29.708C23.3218 28.7562 23.4727 27.7803 23.9061 26.9192C24.3395 26.0581 25.0334 25.3556 25.8891 24.9115C26.7448 24.4675 27.7188 24.3047 28.6724 24.4461C29.6451 24.5903 30.5456 25.0436 31.241 25.7389C31.9363 26.4343 32.3896 27.3348 32.5338 28.3075Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="explore2">
+                    <div class="nav-links">
+                        <div class="explore-text">Explore</div>
+
+                        <div class="nav-link">Contact</div>
+                        <div class="nav-link">About</div>
+                        <div class="nav-link">Services</div>
+                        <div class="nav-link">Hiring</div>
+                        <div class="nav-link">Blog</div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-left">
+                <div class="name-section">
+                    <div class="name-text">Web HoodLums</div>
+                    <div class="text1">Lets Start Working Together</div>
+                   
+                    <div class="email-text">yourgmail@email.com</div>
+                    <div class="copyright-text">@Copyright2023byWebHoodlums</div>
+                </div>
+            </div>
+            <div class="copyright-texts">Privacy policy . Web Hoodlums . Terms&Conditions</div>
+        </div>
+     
+ </div>
+</body>
+</html>

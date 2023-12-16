@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Your Resume</title>
+</head>
+
+<body class="background">
+    <!-- Beginning of Container -->
+    <div class="container">
+        <div class="resume-details">Enter Your Resume Details</div>
+    <!--About section-->
+    <form action="{% url 'submit_form4' %}" method="post" id="resumeForm"  enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-div">
+            <div class="form-header">Tell us about you</div>
+            <!-- Full Name Form Box -->
+            <div class="flex"> <!--Row  flex-->
+                <div class="form-box">
+                    <div class="form-input">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="e.g Sanvi srivatsa">
+                    </div>
+                </div>
+                <!-- Designation Form Box -->
+                <div class="form-box">
+                    <div class="form-input">
+                        <label for="designation">Designation</label>
+                        <input type="text" id="designation" name="designation" placeholder="e.g Data Analyst">
+                    </div>
+                </div>
+                <!-- Contact Form Box -->
+                <div class="form-box">
+                    <div class="form-input">
+                        <label for="contact">Contact No.</label>
+                        <input type="text" id="contact" name="contact" placeholder="e.g 3727234326">
+                    </div>
+                </div>
+            </div>
+            <!-- Email Form Box -->
+            <div class="form-box">
+                <div class="form-input">
+                    <label for="email">Email Address</label>
+                    <input type="text" id="email" name="email" placeholder="e.g webhoodlum@gmail.com">
+                </div>
+            </div>
+            <!-- Location Form Box -->
+            <div class="form-box">
+                <div class="form-input">
+                    <label for="locationvalue">Location</label>
+                    <input type="text" id="locationvalue" name="locationvalue" placeholder="e.g #14,1st main, 1st cross, web colony">
+                </div>
+            </div>
+            <!-- Description Form Box -->
+            <div class="form-box">
+                <div class="form-input">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" placeholder="e.g iam a sport enthusiastic and i like to read books"></textarea>
+                </div>
+            </div>
+        </div>
+        <!--Programming Languages Section-->
+        <div class="form-div">
+            <div class="form-header">Coding Languages You Know</div>
+            <div class="flex"> <!--row flex-->
+                <!-- language 1 Form Box -->
+                <div class="form-box">
+                    <div class="form-input">
+                        <label for="language1">Language 1</label>
+                        <input type="text" id="language1" name="language1" placeholder="e.g html">
+                    </div>
+                </div>
+                <!-- language 2 Form Box -->
+                <div class="form-box">
+                    <div class="form-input">
+                        <label for="language2">Language 2</label>
+                        <input type="text" id="language2" name="language2" placeholder="e.g css">
+                    </div>
+                </div>
+                <!-- language 3 Form Box -->
+                <div class="form-box">
+                    <div class="form-input">
+                        <label for="language3">Language 3</label>
+                        <input type="text" id="language3" name="language3" placeholder="e.g java">
+                    </div>
+                </div>
+                <!-- language 4 Form Box -->
+                <div class="form-box">
+                    <div class="form-input">
+                        <label for="language4">Language 4</label>
+                        <input type="text" id="language4" name="language4" placeholder="e.g python">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Skills Section-->
+        <div class="form-div">
+            <div class="flex-column"> <!--Column flex-->
+                <!--Professional Skill Section-->
+                <div class="form-header">Professional Skills</div>
+                <div class="section-container">
+                    <div class="flex"> <!--Row Flex-->
+                    <div class="skill-box">
+                        <div class="form-box">
+                            <div class="form-input">
+                                <label for="Professional-Skill-1">Skill 1</label>
+                                <input type="text" id="Professional_Skill_1" name="Professional_Skill_1" placeholder="Skill Name">
+                            </div>
+                        </div>
+                        <div class="form-box">
+                            <div class="form-input">
+                                <label for="skill_range">Skill Range</label>
+                                <input type="text" id="skill_range1" name="skill_range1" placeholder="e.g. 85" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="form-box">
+                            <div class="form-input">
+                                <label for="Professional-Skill-2">Skill 2</label>
+                                <input type="text" id="Professional_Skill_2" name="Professional_Skill_2" placeholder="Skill Name">
+                            </div>
+                        </div>
+                        <div class="form-box">
+                            <div class="form-input">
+                                <label for="skill_range">Skill Range</label>
+                                <input type="text" id="skill_range2" name="skill_range2" placeholder="e.g. 90" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="form-box">
+                            <div class="form-input">
+                                <label for="Professional-Skill-3">Skill 3</label>
+                                <input type="text" id="Professional_Skill_3" name="Professional_Skill_3" placeholder="Skill Name">
+                            </div>
+                        </div>
+                        <div class="form-box">
+                            <div class="form-input">
+                                <label for="skill_range">Skill Range</label>
+                                <input type="text" id="skill_range3" name="skill_range3" placeholder="e.g. 95" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="form-box">
+                            <div class="form-input">
+                                <label for="Professional-Skill-4">Skill 4</label>
+                                <input type="text" id="Professional_Skill_4" name="Professional_Skill_4" placeholder="Skill Name">
+                            </div>
+                        </div>
+                        <div class="form-box">
+                            <div class="form-input">
+                                <label for="skill_range">Skill Range</label>
+                                <input type="text" id="skill_range4" name="skill_range4" placeholder="e.g. 95" >
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!--Technical Skills Section-->
+                <div class="form-header">Technical Skills</div>
+                <div class="section-container">
+                    <div class="flex"> <!--Row Flex-->
+                    <div class="skill-box">
+                        <div class="form-box" id="Technical-Skill-1">
+                            <div class="form-input">
+                                <label for="Technical-Skill-1">Skill 1</label>
+                                <input type="text" id="Technical_Skill_1" name="Technical_Skill_1" placeholder="Skill Name">
+                            </div>
+                        </div>
+                        <div class="form-box">
+                            <div class="form-input">
+                                <label for="skill_range">Skill Range</label>
+                                <input type="text" id="skill_range5" name="skill_range5" placeholder="e.g. 95" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="skill-indicator">
+                            <div class="form-box">
+                                <div class="form-input">
+                                    <label for="2">Skill 2</label>
+                                    <input type="text" id="Technical_Skill_2" name="Technical_Skill_2" id="2" name="2" placeholder="Skill Name">
+                                </div>
+                            </div>
+                            <div class="form-box">
+                                <div class="form-input">
+                                    <label for="skill_range">Skill Range</label>
+                                    <input type="text" id="skill_range6" name="skill_range6" placeholder="e.g. 50" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="form-box">
+                            <div class="form-input">
+                                <label for="Technical-Skill-3">Skill 3</label>
+                                <input type="text" id="Technical_Skill_3" name="Technical_Skill_3" placeholder="Skill Name">
+                            </div>
+                        </div>
+                        <div class="form-box">
+                            <div class="form-input">
+                                <label for="skill_range">Skill Range</label>
+                                <input type="text" id="skill_range7" name="skill_range7" placeholder="e.g. 95" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="form-box">
+                            <div class="form-input">
+                                <label for="Technical-Skill-4">Skill 4</label>
+                                <input type="text" id="Technical_Skill_4" name="Technical_Skill_4" placeholder="Skill Name">
+                            </div>
+                        </div>
+                        <div class="form-box">
+                                <div class="form-input">
+                                <label for="skill_range">Skill Range</label>
+                                <input type="text" id="skill_range8" name="skill_range8" placeholder="e.g. 95" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <!--Education Section-->
+        <div class="form-div">
+            <div class="form-header">Education</div>
+            <div class="flex"> <!--Row Flex-->
+                <div class="section-container">
+                    <div class="form-header">Education 1</div>
+                    <div class="form-box">
+                        <div class="form-input">
+                            <label for="eduname1">Name of the Degree</label>
+                            <input type="text" id="eduname1" name="eduname1" placeholder="Type Here">
+                        </div>
+                    </div>
+                    <div class="form-box">
+                        <div class="form-input">
+                            <label for="Uni-name">University Name</label>
+                            <input type="text" id="Uni1" name="Uni1" placeholder="e.g v.t.u">
+                        </div>
+                    </div>
+                    <div class="form-box">
+                        <div class="form-input">
+                            <label for="startdate">Year of Degree</label>
+                            <input type="text" id="startdate" name="startdate" placeholder="Start Year">
+                            <input type="text" id="enddate" name="enddate" placeholder="End Year">
+                        </div>
+                    </div>
+                    <div class="form-box">
+                        <div class="form-input">
+                            <label for="edudes">Description</label>
+                            <input type="text" id="edudes" name="edudes" placeholder="Type Here">
+                        </div>
+                    </div>
+                </div>
+                <div class="section-container">
+                    <div class="form-header">Education 2</div>
+                    <div class="form-box">
+                        <div class="form-input">
+                            <label for="eduname2">Name of the Degree</label>
+                            <input type="text" id="eduname2" name="eduname2" placeholder="Type Here">
+                        </div>
+                    </div>
+                    <div class="form-box">
+                        <div class="form-input">
+                            <label for="Uni-name2">University Name</label>
+                            <input type="text" id="Uni2" name="Uni2" placeholder="e.g v.t.u">
+                        </div>
+                    </div>
+                    <div class="form-box">
+                        <div class="form-input">
+                            <label for="startdate2">Year of Degree</label>
+                            <input type="text" id="startdate2" name="startdate2" placeholder="Start Year">
+                            <input type="text" id="enddate2" name="enddate2" placeholder="End Year">
+                        </div>
+                    </div>
+                    <div class="form-box">
+                        <div class="form-input">
+                            <label for="edudes2">Description</label>
+                            <input type="text" id="edudes2" name="edudes2" placeholder="Type Here">
+                        </div>
+                    </div>
+                </div>
+                <div class="section-container">
+                    <div class="form-header">Education 3</div>
+                    <div class="form-box">
+                        <div class="form-input">
+                            <label for="eduname3">Name of the Degree</label>
+                            <input type="text" id="eduname3" name="eduname3" placeholder="Type Here">
+                        </div>
+                    </div>
+                    <div class="form-box">
+                        <div class="form-input">
+                            <label for="Uni-name3">University Name</label>
+                            <input type="text" id="Uni3" name="Uni3" placeholder="e.g v.t.u">
+                        </div>
+                    </div>
+                    <div class="form-box" >
+                        <div class="form-input">
+                            <label for="startdate3">Year of Degree</label>
+                            <input type="text" id="startdate3" name="startdate3" placeholder="Start Year">
+                            <input type="text" id="enddate3" name="enddate3" placeholder="End Year">
+                        </div>
+                    </div>
+                    <div class="form-box">
+                        <div class="form-input">
+                            <label for="edudes3">Description</label>
+                            <input type="text" id="edudes3" name="edudes3" placeholder="Type Here">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Domain Section-->
+        <div class="form-div">
+            <div class="form-header">Enter Your Domain (e.g : web developer)</div>
+            <div class="flex"> <!--Row flex-->
+                <!-- Domain 1 Form Box -->
+                <div class="form-box">
+                    <div class="form-input">
+                        <label for="Domain1">Domain 1</label>
+                        <input type="text" id="Domain1" name="Domain1" placeholder="Domain Name">
+                        <label for="Description (1 line)">Description</label>
+                        <input type="text" id="Description1" name="Description1" placeholder="Domain Description" >
+                    </div>
+                </div>
+                <!-- Skill 2 Form Box -->
+                <div class="form-box">
+                    <div class="form-input">
+                        <label for="Domain2">Domain 2</label>
+                        <input type="text" id="Domain2" name="Domain2" placeholder="Domain Name">
+                        <label for="Description (1 line)">Description</label>
+                        <input type="text" id="Description2" name="Description2" placeholder="Domain Description">
+                    </div>
+                </div>
+                <!-- Skill 3 Form Box -->
+                <div class="form-box">
+                    <div class="form-input">
+                        <label for="Domain3">Domain 3</label>
+                        <input type="text" id="Domain3" name="Domain3" placeholder="Domain Name">
+                        <label for="Description (1 line)">Descrption</label>
+                        <input type="text" id="Description3" name="Description3" placeholder="Domain Description">
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--Project Section-->
+        <div class="form-div">
+            <div class="form-header">Select Your Projects!!</div>
+            <!-- project file upload -->
+            <div class="flex">  <!--row flex-->
+                <div class="form-box">
+                    <div class="file-upload-container">
+                        <div class="form-input">
+                            <label for="Project1">Project 1</label>
+                            <input type="text" id="Project_Name1" name="Project_Name1" placeholder="Project name">
+                            <label for="Domain1">Domain</label>
+                            <input type="text" id="Project_Domain1" name="Project_Domain1" placeholder="Project domain">
+                            <label for="Project-Description1 (1 line)">Project Descrption 1</label>
+                            <input type="text" id="Project_Description1" name="Project_Description1" placeholder="Project Description">
+                        </div>
+                        <div class="upload-allign">
+                            <label for="file-upload" class="file-upload-label">Git URL</label>
+                            <input class="url-class" type="url" id="url1" name="url1" placeholder="Type here">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-box">
+                    <div class="file-upload-container">
+                        <div class="form-input">
+                            <label for="Project2">Project 2</label>
+                            <input type="text" id="Project_Name2" name="Project_Name2" placeholder="Project name">
+                            <label for="Domain2">Domain</label>
+                            <input type="text" id="Project_Domain2" name="Project_Domain2" placeholder="Project domain">
+                            <label for="Project-Description2 (1 line)">Project Descrption 2</label>
+                            <input type="text" id="Project_Description2" name="Project_Description2" placeholder="Project Description">
+                        </div>
+                        <div class="upload-allign">
+                            <label for="file-upload" class="file-upload-label">Git URL</label>
+                            <input class="url-class" type="url" id="url2" name="url2" placeholder="Type here">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-box">
+                    <div class="file-upload-container">
+                        <div class="form-input">
+                            <label for="Project3">Project 3</label>
+                            <input type="text" id="Project_Name3" name="Project_Name3" placeholder="Project name">
+                            <label for="Domain3">Domain</label>
+                            <input type="text" id="Project_Domain2" name="Project_Domain3" placeholder="Project domain">
+                            <label for="Project-Description3 (1 line)">Project Descrption 3</label>
+                            <input type="text" id="Project_Description3" name="Project_Description3" placeholder="Project Description">
+                        </div>
+                        <div class="upload-allign">
+                            <label for="file-upload" class="file-upload-label">Git URL</label>
+                            <input class="url-class" type="url" id="url3" name="url3" placeholder="Type here">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Submission Button   -->
+        <button type="submit" class="submit">Submit</button>
+    </form>
+    </div>
+    <!-- End of Container -->
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

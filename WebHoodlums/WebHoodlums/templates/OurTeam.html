@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/images/icc.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/check.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/user.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    {% load static %}
+    <style>
+        /* Reset some default styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color:black;
+        }
+
+        .item a {
+            text-decoration: none;
+        }
+
+        /* Set the default link color */
+        a:link {
+        color: #1296E0;
+        }
+
+        /* Set the visited link color */
+        a:visited {
+        color: #1296E0;
+        }
+
+        /* Set the link color when hovered */
+        a:hover {
+        color: #1296E0;
+        }
+
+        /* Set the link color when clicked/active */
+        a:active {
+        color: #1296E0;
+        }
+
+        h6{
+            color: white;
+            text-align: center;
+        }
+
+        .icon-container {
+            width: 12px;
+            height: 12px;
+            margin: auto;
+           }
+
+        .icon {
+            width: 12px;
+            height: 12px;
+             color: white;
+            margin: auto;
+            margin-left: 50%;
+        }
+
+        .icon-part-1 {
+            width: 8.67px;
+            height: 4.30px;
+            left: 1.67px;
+            top: 4.10px;
+            position: absolute;
+            background: white;
+        }
+
+        .icon-part-2 {
+            width: 12px;
+            height: 12px;
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            opacity: 0;
+        }
+
+        div.home{
+            display: flex;
+            flex-direction: column;
+            margin-top: 2%;
+            position: relative;
+            margin: 2rem auto;
+            width: 1000px;
+            height:100%;
+            background-color: #000000;
+            /* background-color: grey; */
+        }
+
+        /* Global styles */
+        body {
+            font-family: 'Plus Jakarta Sans';
+            background-color: #000000;
+        }
+
+        /* navigation bar */
+
+        div.container-fluid {
+            width: auto;
+            height: 40px;
+            position: relative;
+        }
+
+        div.nav {
+            width: 100%;
+            position: relative;
+        }
+
+        div.navcolor {
+            width: 100%;
+            height: 90px;
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            background: black;
+        }
+
+        div.loginnav {
+            width: 22%;
+            height: 20px;
+            left: 3%;
+            top: 31px;
+            position: absolute;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 9px;
+            display: inline-flex;
+        }
+
+        div.login-element{
+            width: 110px;
+            height: 20px;
+            position: relative;
+        }
+
+        div.point{
+            width: 5px;
+            height: 5px;
+            left: 0px;
+            top: 10px;
+            position: absolute;
+            background: white;
+            border-radius: 9999px;
+        }
+
+        div.item{
+            left: 10px;
+            top: 0px;
+            position: absolute;
+            color: white;
+            font-size: 16px;
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+
+        div.item1{
+            left: 0px;
+            top: 0px;
+            width: 150px;
+            position: absolute;
+            color: white;
+            font-size: 16px;
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+
+        div.point1{
+            width: 5px;
+            height: 5px;
+            left: 125px;
+            top: 10px;
+            position: absolute;
+            background: white;
+            border-radius: 9999px;
+        }
+
+        div.item2{
+            left: 135px;
+            top: 0px;
+            position: absolute;
+            color: #1296E0;
+            font-size: 16px;
+            font-family: Plus Jakarta Sans;
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+
+        div.item:hover{
+            color:#1296E0;
+            font-size: 15px;
+        }
+
+        div.navigation{
+            width: 500px;
+            height: auto;
+            left: 40%;
+            top: 31px;
+            position: relative;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 54px;
+            display: inline-flex;
+        }
+
+        div.home-element{
+            width: 70px;
+            height: 20px;
+            position: relative;
+        }
+
+        div.itemnav{
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 9px;
+            display: inline-flex;
+        }
+
+        div.about-element{
+            width: 70px;
+            height: 20px;
+            position: relative;
+        }
+
+        div.members-element{
+            width: 80px;
+            height: 20px;
+            position: relative;
+        }
+
+        div.contact-element{
+            width: 30px;
+            height: 20px;
+            position: relative;
+        }
+
+        /* top section */
+
+        div.top-section{
+            width:100%;
+            height:550px;
+            margin:auto;
+            /* margin-top:5%;
+            margin-left: 2%;
+            margin-right: 10%; */
+            background-image: url("{% static 'images/image.png' %}");
+            background-size: cover;
+        }
+
+        h1.w{
+            margin-left: 25%;
+            margin-top: 12%;
+            font-size: 80px;
+            color: black;
+        }
+
+        p{
+            font-size: 15px;;
+        }
+        h1.h{
+            margin-left: 38%;
+            margin-top: -6%;
+            font-size: 95px;
+            color: white;
+        }
+
+        h1.h1{
+            margin-left: 28%;
+            margin-top: -8%;
+            font-size: 95px;
+            color: white;
+        }
+
+        /* About section */
+
+        div.container-fluid1{
+            height:auto;
+            width: 100%;;
+        }
+
+        div.head{
+            font-size: 10px;
+            color: white;
+            position: relative;
+            left: 6.5%;
+            margin-top:3%;
+            margin-bottom: -1%;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem auto;
+            height: 300px;
+        }
+
+        div.rectangle {
+            height: 209px;
+            border-radius: 14px;
+            border: 1px solid #ccc;
+            content: '\F0068';
+            position: relative;
+        }
+
+        div.rectangle:hover {
+            border: 1px solid #777;
+        }
+
+        div.rectangle img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.heading {
+            position: absolute;
+            margin: 2rem auto;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            color: white;
+        }
+
+
+        .responsive{
+            padding: 0 10px ;
+            float: left;
+            width: 29.99999%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+
+        .image-container {
+            position: relative;
+            width:100%;
+            display: inline-block;
+            filter:grayscale(100%)
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .text-info {
+            position: absolute;
+            border-radius: 14px;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            box-sizing: border-box;
+            transition: height 0.3s;
+            overflow: hidden;
+            height: 50px;
+        }
+        h4{
+            margin-top: 4.5%;
+        }
+
+
+        .image-container:hover .text-info {
+            height: 80%;
+        }
+
+        /* members section */
+
+        div.members{
+            height:500px;           width:100%;
+        }
+
+        div.heading1{
+            color: #1296E0;
+            font-size: 36px;
+            font-family: Plus Jakarta Sans;
+            position: relative;
+            text-align: center;
+            width: 800px;
+            left:40%;
+            height: 50px
+        }
+
+        .container
+        {
+            display: flex;
+            flex-direction: row;
+            height: 300px;
+            width: 100%;
+            margin: auto;
+            background-color:#000000;
+            border-radius:20px;
+        }
+
+        .circle1
+        {
+            background-position: 55%;
+            background-size: 120% 180%;
+            position: relative;
+            bottom: 25px;
+            left: -12%;
+            margin-right: 2%;
+            margin-top: 10%;
+            padding: 10%;
+            height: 4%;
+            width: 4%;
+            border-radius: 50%;
+            background-image: url("{% static 'images/Shashank.jpg' %}");
+        }
+
+        .circle2
+        {
+            background-position: center;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            position: relative;
+            bottom: 25px;
+            left: -12%;
+            margin-right: 2%;
+            margin-top: 10%;
+            padding: 10%;
+            height: 4%;
+            width: 4%;
+            border-radius: 50%;
+            background-image: url("{% static 'images/Sarika.jpg' %}");
+        }
+
+        .circle3
+        {
+            background-position: center;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            position: relative;
+            bottom: 25px;
+            left: -12%;
+             margin-right: 2%;
+            margin-top: 10%;
+            padding: 10%;
+            height: 4%;
+            width: 4%;
+            border-radius: 50%;
+            background-image: url("{% static 'images/Vaishnavi.jpg' %}");
+        }
+
+        .circle4
+        {
+            background-position: center;
+            background-size: 100% 100%;
+            /* background-size: contain; */
+            background-repeat: no-repeat;
+            position: relative;
+            bottom: 25px;
+            left: -12%;
+             margin-right: 2%;
+            margin-top: 10%;
+            padding: 10%;
+            height: 4%;
+            width: 4%;
+            border-radius: 50%;
+            background-image: url("{% static 'images/Fazz.jpg' %}");
+        }
+
+        div#member1{
+            background-image: url("images/Shashank.jpg");
+        }
+        /* footer section */
+
+        .container1 {
+            position: relative;
+            margin-top:  20%;
+            width:100%;
+            height: 530px;
+            margin-top:5%;
+            margin: auto;
+ ;            background-color: #101010;
+            overflow: hidden;
+        }
+
+        .explore
+        {
+            position: absolute;
+            left: 65%;
+            top: 10%;
+        }
+
+        .explore-section,
+        .name-section,
+        .social-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 32px;
+        }
+
+        .explore-section {
+            position: absolute;
+            left: 80%;
+            top: 30%;
+        }
+
+        .name-section {
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            gap: 4px;
+        }
+
+        .social-section {
+            position: absolute;
+            left: 90%;
+            top: 10%;
+            max-width: 15%; /* Adjust the max-width as needed */
+        }
+
+        .explore-text,
+        .social-text {
+            color: rgba(255, 255, 255, 0.48);
+            font-size: 16px;
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .nav-links,
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .nav-link,
+        .social-link {
+            width: 55px;
+            height: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            color: rgba(255, 255, 255, 0.48);
+            font-size: 20px;
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .name-text {
+            width: 433px;
+            color: white;
+            font-size: 54px;
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+
+
+        .email-text {
+            color: #1296E0;
+            font-size: 50px;
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 400;
+            word-wrap: break-word;
+            position: relative;
+            top: 60px;
+        }
+
+        .copyright{
+            position: absolute;
+            left: 0%;
+            top: 100px;
+            color: rgba(255, 255, 255, 0.48);
+            font-size: 20px;
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+
+        .copyright-text {
+            margin: auto;
+            position: absolute;
+            top: 240px;
+            color: rgba(255, 255, 255, 0.48);
+            font-size: 14px;
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+
+        .copyright-texts {
+            margin: auto;
+            position: absolute;
+            bottom: 35px;
+            left: 34%;
+            color: rgba(255, 255, 255, 0.48);
+            font-size: 14px;
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+    </style>
+    <title>Our Team</title>
+</head>
+<body>
+    <div class="home">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="nav">
+                    <div class="navcolor"></div>
+                        <div class="loginnav">
+                            <div class="login-element">
+                                <div class="item1">Web Hoodlums</div>
+                                <div class="point1"></div>
+                                <div class="item2">Team</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navigation">
+                        <div class="itemnav">
+                            <div class="home-element">
+                                <div class="point"></div>
+                                <div class="item"><a href="{% url 'index' %}">Home</a></div>
+                            </div>
+                        </div>
+                        <div class="itemnav">
+                            <div class="about-element">
+                                <div class="point"></div>
+                                <div class="item"><a href="#about">About</a></div>
+                            </div>
+                        </div>
+                        <div class="itemnav">
+                            <div class="members-element">
+                                <div class="point"></div>
+                                <div class="item"><a href="#member">Members</a></div>
+                            </div>
+                        </div>
+                        <div class="itemnav">
+                            <div class="contact-element">
+                                <div class="point"></div>
+                                <div class="item"><a href="#contact">Contact</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-section">
+            <h1 class="w">Web</h1>
+            <h1 class="h">Hoodlums</h1>
+            <!-- <h1 class="h1">xyz</h1> -->
+            <h6>Scroll to find more</h6>
+            <div class="icon-container">
+                <div class="icon">
+                    <!-- Use the 'fa-arrow-down' class for a down arrow icon from Font Awesome -->
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid1" id="about">
+            <div class="head">ABOUT WEB HOODLUMS</div>
+            <div class="wrapper">
+                <div class="responsive">
+                    <div class="rectangle">
+                        <div class="image-container">
+                            <img src="{% static 'images/BG Attribute1.png' %}" alt="Forest" width="600" height="400">
+                            <div class="text-info">
+                                <h4>Creative Agency</h4>
+                                <p>Elevate your brand with our innovative creative agency—where design meets strategy to create visually stunning digital experiences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="responsive">
+                    <div class="rectangle">
+                        <div class="image-container">
+                            <img src="{% static 'images/BG Attribute2.png' %}" alt="Forest" width="600" height="400">
+                            <div class="text-info">
+                                <h4>Quality Work</h4>
+                                <p>Trust our professional coding team to deliver excellence—precise, bug-free solutions that elevate your website's performance and user experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="responsive">
+                    <div class="rectangle">
+                        <div class="image-container">
+                            <img src="{% static 'images/BG Attribute3.png' %}" alt="Forest" width="600" height="400">
+                            <div class="text-info">
+                                <h4>Professional Team</h4>
+                                <p>Empower your project with our professional coding team—experts dedicated to delivering precision, reliability, and excellence in every line of code.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="members" id="member">
+            <div class="container">
+                <div class="heading1">MEMBERS</div>
+                <!-- <div class="circle" id="member1">
+                    <div style="width: 100%; height: 100%; position: relative">
+                        <div style="width: 40px; height: 40px; left: 40px; top: 60px; position: absolute; background: #1296E0; border-radius: 9999px"></div>
+                        <div style="width: 20px; height: 10px; left: 54.5px; top: 73px; position: absolute; "><i class="gg-user"></i></div>
+                    </div>
+                </div> -->
+                <div class="circle1" id="member2">
+                    <div style="width: 100%; height: 100%; position: relative">
+                        <div style="width: 40px; height: 40px; left: 40px; top: 60px; position: absolute; background: #1296E0; border-radius: 9999px"></div>
+                        <div style="width: 20px; height: 10px; left: 54.5px; top: 73px; position: absolute; "><i class="gg-user"></i></div>
+                    </div>
+                </div>
+                <div class="circle2" id="member3">
+                    <div style="width: 100%; height: 100%; position: relative">
+                        <div style="width: 40px; height: 40px; left: 40px; top: 60px; position: absolute; background: #1296E0; border-radius: 9999px"></div>
+                        <div style="width: 20px; height: 10px; left: 54.5px; top: 73px; position: absolute; "><i class="gg-user"></i></div>
+                    </div>
+                </div>
+                <div class="circle3" id="member4">
+                    <div style="width: 100%; height: 100%; position: relative">
+                        <div style="width: 40px; height: 40px; left: 40px; top: 60px; position: absolute; background: #1296E0; border-radius: 9999px"></div>
+                        <div style="width: 20px; height: 10px; left: 54.5px; top: 73px; position: absolute; "><i class="gg-user"></i></div>
+                    </div>
+                </div>
+                <div class="circle4" id="member4">
+                    <div style="width: 100%; height: 100%; position: relative">
+                        <div style="width: 40px; height: 40px; left: 40px; top: 60px; position: absolute; background: #1296E0; border-radius: 9999px"></div>
+                        <div style="width: 20px; height: 10px; left: 54.5px; top: 73px; position: absolute; "><i class="gg-user"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container1" id="contact">
+            <div class="right">
+                <div class="explore">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="56" height="57" viewBox="0 0 56 57" fill="none">
+                        <circle cx="28" cy="28.9801" r="28" fill="black"/>
+                        <path d="M39 17.9924C38.0424 18.8206 36.9821 19.454 35.86 19.8683C35.2577 19.0193 34.4573 18.4175 33.567 18.1444C32.6767 17.8712 31.7395 17.94 30.8821 18.3412C30.0247 18.7424 29.2884 19.4568 28.773 20.3878C28.2575 21.3188 27.9877 22.4214 28 23.5465V24.7725C26.2426 24.8284 24.5013 24.3505 22.931 23.3815C21.3607 22.4125 20.0103 20.9823 19 19.2185C19 19.2185 15 30.253 24 35.1572C21.9405 36.8712 19.4872 37.7307 17 37.6094C26 43.7397 37 37.6094 37 23.5097C36.9991 23.1682 36.9723 22.8275 36.92 22.4921C37.9406 21.258 38.6608 19.7 39 17.9924Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="57" viewBox="0 0 56 57" fill="none">
+                        <circle cx="28" cy="28.9801" r="28" fill="black"/>
+                        <path d="M35 17.9801H31.1818C29.4941 17.9801 27.8755 18.5596 26.682 19.591C25.4886 20.6225 24.8182 22.0214 24.8182 23.4801V26.7801H21V31.1801H24.8182V39.9801H29.9091V31.1801H33.7273L35 26.7801H29.9091V23.4801C29.9091 23.1884 30.0432 22.9086 30.2819 22.7023C30.5205 22.496 30.8443 22.3801 31.1818 22.3801H35V17.9801Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="57" viewBox="0 0 56 57" fill="none">
+                        <circle cx="28" cy="28.9801" r="28" fill="black"/>
+                        <path d="M32.7917 24.6754C34.5709 24.6754 36.2772 25.4196 37.5352 26.7443C38.7933 28.0689 39.5 29.8656 39.5 31.739V39.9797H35.0278V31.739C35.0278 31.1145 34.7922 30.5156 34.3729 30.0741C33.9535 29.6325 33.3848 29.3844 32.7917 29.3844C32.1987 29.3844 31.6299 29.6325 31.2105 30.0741C30.7912 30.5156 30.5556 31.1145 30.5556 31.739V39.9797H26.0834V31.739C26.0834 29.8656 26.7901 28.0689 28.0482 26.7443C29.3063 25.4196 31.0125 24.6754 32.7917 24.6754Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.2917 25.6324H16.5V39.9803H21.2917V25.6324Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.8958 22.7627C20.219 22.7627 21.2917 21.6921 21.2917 20.3714C21.2917 19.0507 20.219 17.9801 18.8958 17.9801C17.5727 17.9801 16.5 19.0507 16.5 20.3714C16.5 21.6921 17.5727 22.7627 18.8958 22.7627Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="56" height="57" viewBox="0 0 56 57" fill="none">
+                        <circle cx="28" cy="28.9801" r="28" fill="black"/>
+                        <path d="M33.5 17.9801H22.5C19.4624 17.9801 17 20.4425 17 23.4801V34.4801C17 37.5177 19.4624 39.9801 22.5 39.9801H33.5C36.5376 39.9801 39 37.5177 39 34.4801V23.4801C39 20.4425 36.5376 17.9801 33.5 17.9801Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M32.5338 28.3075C32.6752 29.2611 32.5124 30.2351 32.0683 31.0908C31.6243 31.9465 30.9218 32.6404 30.0607 33.0738C29.1996 33.5072 28.2237 33.6581 27.2719 33.5049C26.3201 33.3518 25.4409 32.9024 24.7592 32.2207C24.0775 31.539 23.6281 30.6598 23.475 29.708C23.3218 28.7562 23.4727 27.7803 23.9061 26.9192C24.3395 26.0581 25.0334 25.3556 25.8891 24.9115C26.7448 24.4675 27.7188 24.3047 28.6724 24.4461C29.6451 24.5903 30.5456 25.0436 31.241 25.7389C31.9363 26.4343 32.3896 27.3348 32.5338 28.3075Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="explore-section">
+                    <div class="explore-text">Explore</div>
+                    <div class="nav-links">
+                        <div class="nav-link">Contact</div>
+                        <div class="nav-link">About</div>
+                        <div class="nav-link">Services</div>
+                        <div class="nav-link">Hiring</div>
+                        <div class="nav-link">Blog</div>
+                    </div>
+                </div>
+            </div>
+            <div class="left">
+                <div class="name-section">
+                    <div class="copyright">Lets Start Working Together</div>
+                    <div class="name-text">Web HoodLums</div>
+                    <div class="email-text">yourgmail@email.com</div>
+                    <div class="copyright-text">@Copyright2023byWebHoodlums</div>
+                </div>
+            </div>
+            <div class="copyright-texts">Privacy policy . Web Hoodlums . Terms&Conditions</div>
+        </div>
+    </div>
+</body>
+</html>
