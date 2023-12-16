@@ -21,3 +21,9 @@ Backend: Django (for user authentication and database functionality)
 
 **Contributors**
 Faza Ulfath, Shashank B R, Sarika M N, Vaishnavi
+
+**Website Live Link**
+https://Sarika.pythonanywhere.com
+
+**Figma Link**
+https://www.figma.com/file/cAg7gS0MNrUL9awMRhadcs/Web-Hoodlums?type=design&node-id=0%3A1&mode=design&t=TKQRdtVuObXONTle-1
